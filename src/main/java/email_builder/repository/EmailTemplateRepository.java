@@ -7,6 +7,5 @@ import java.util.List;
 
 public interface EmailTemplateRepository extends JpaRepository<EmailTemplate, Long> {
     List<EmailTemplate> findByOrderByCreatedAtDesc();
-    List<EmailTemplate> findByTitleContainingIgnoreCase(String title);
-
+    List<EmailTemplate> findByTitleContainingIgnoreCase(String query);
 }
